@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: white;
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 10px #ff4655;
+}
+
+/* 🔍 Buscador */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 5px 15px;
+  width: 90%;
+  max-width: 350px;
+  transition: background 0.3s ease;
+}
+
+.search-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.search-container .icon img {
+  width: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.search-container .icon img:hover {
+  transform: scale(1.2);
+}
+
+/* 🎯 Filtros */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.filter-btn {
+  background: #ff4655;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.filter-btn:hover {
+  transform: scale(1.1);
+  background: #ff3344;
+}
+
+h2 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+  text-shadow: 0px 0px 8px #ff4655;
+}
+
+/* 🎮 Grid de juegos */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 50px;
+}
+
+/* 🎴 Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 8px 20px rgba(255,70,85,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-shadow: 0px 0px 5px #ff4655;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.genres span {
+  background: rgba(255,255,255,0.2);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: background 0.3s;
+}
+
+.genres span:hover {
+  background: rgba(255,70,85,0.4);
+}
+
+.rating {
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0px 0px 5px #000;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 500px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .search-container { width: 95%; }
+  .filter-btn { padding: 6px 12px; font-size: 0.8rem; }
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Fondo con imagen */
+  background: url('https://www.solofondos.com/wp-content/uploads/2015/11/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+
+  /* Capa de gradiente encima de la imagen */
+  position: relative;
+  color: white;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15,12,41,0.7), rgba(48,43,99,0.6), rgba(36,36,62,0.7));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.portfolio-btn-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.portfolio-btn {
+  text-decoration: none;
+  color: #ccc; /* color suave para que no resalte demasiado */
+  font-size: 14px;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.portfolio-btn:hover {
+  color: white;
+  border-color: white;
+}
